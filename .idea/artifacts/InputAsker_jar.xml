@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="InputAsker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/InputAsker_jar</output-path>
+    <root id="archive" name="InputAsker.jar">
+      <element id="module-output" name="InputAsker" />
+    </root>
+  </artifact>
+</component>

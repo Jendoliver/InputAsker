@@ -325,7 +325,7 @@ public class InputAsker
      * @param msg = Message to print to the user, with an automatically added "(y/n)
      * @return = true if the users input y or Y, false if it inputs n or N
      */
-    public boolean askYNQuestion(String msg)
+    public static boolean askYNQuestion(String msg)
     {
         String str;
         do {
