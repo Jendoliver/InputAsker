@@ -329,7 +329,7 @@ public class InputAsker
     {
         String str;
         do {
-            str = askNonEmptyString(msg + " (y/n)");
+            str = askNonEmptyString(msg + " (y/n): ");
             if(str.equals("y") || str.equals("Y")) {
                 return true;
             } else if (str.equals("n") || str.equals("N")) {
