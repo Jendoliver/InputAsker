@@ -24,14 +24,14 @@ public class InputAsker
         int num = 0;
         boolean error = true;
         do {
-            System.out.println(msg);
+            System.out.print(msg);
             try {
                 num = Integer.parseInt(br.readLine());
                 error = false;
             } catch (IOException e) {
                 System.out.println("Input error: " + e.getMessage());
             } catch (NumberFormatException ex) {
-                System.out.println("Please, io an integer (example: 5)");
+                System.out.println("Please, input an integer (example: 5)");
             }
         } while (error);
         return num;
@@ -79,7 +79,7 @@ public class InputAsker
         int num = 0;
         boolean error = true;
         do {
-            System.out.println(msg);
+            System.out.print(msg);
             try {
                 num = Integer.parseInt(br.readLine());
                 if (num < 0) {
@@ -90,7 +90,7 @@ public class InputAsker
             } catch (IOException e) {
                 System.out.println("Input error: " + e.getMessage());
             } catch (NumberFormatException ex) {
-                System.out.println("Please, io an unsigned integer (example: 5)");
+                System.out.println("Please, input an unsigned integer (example: 5)");
             }
         } while (error);
         return num;
@@ -138,14 +138,14 @@ public class InputAsker
         double num = 0;
         boolean error = true;
         do {
-            System.out.println(msg);
+            System.out.print(msg);
             try {
                 num = Double.parseDouble(br.readLine());
                 error = false;
             } catch (IOException e) {
                 System.out.println("Input error: " + e.getMessage());
             } catch (NumberFormatException ex) {
-                System.out.println("Please, io a double (example: 5.2)");
+                System.out.println("Please, input a double (example: 5.2)");
             }
         } while (error);
         return num;
@@ -193,7 +193,7 @@ public class InputAsker
         double num = 0;
         boolean error = true;
         do {
-            System.out.println(msg);
+            System.out.print(msg);
             try {
                 num = Double.parseDouble(br.readLine());
                 if (num < 0) {
@@ -204,7 +204,7 @@ public class InputAsker
             } catch (IOException e) {
                 System.out.println("Input error: " + e.getMessage());
             } catch (NumberFormatException ex) {
-                System.out.println("Please, io an unsigned double (example: 5.2)");
+                System.out.println("Please, input an unsigned double (example: 5.2)");
             }
         } while (error);
         return num;
@@ -252,7 +252,7 @@ public class InputAsker
         String str = "";
         boolean error = true;
         do {
-            System.out.println(msg);
+            System.out.print(msg);
             try {
                 str = br.readLine();
                 error = false;
@@ -289,7 +289,7 @@ public class InputAsker
         String str = "";
         boolean error = true;
         do {
-            System.out.println(msg);
+            System.out.print(msg);
             try {
                 str = br.readLine();
                 if(str.equals(""))  {
