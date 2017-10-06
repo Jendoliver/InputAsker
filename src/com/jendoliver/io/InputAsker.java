@@ -70,6 +70,79 @@ public class InputAsker
     }
 
     /**
+     * Asks the user for an int between a and b, without minding the order
+     * @param msg = Message to print to the user
+     * @param a = Bound
+     * @param b = Bound
+     * @return = int input by the user
+     */
+    public static int askIntBetween(String msg, int a, int b)
+    {
+        int num = 0;
+        boolean error = true;
+        do {
+            System.out.print(msg);
+            try {
+                num = Integer.parseInt(br.readLine());
+                if (a <= b) {
+                    if (num < a || num > b) {
+                        System.out.println("Please input an integer between " + a + " and " + b);
+                    } else {
+                        error = false;
+                    }
+                } else {
+                    if (num < b || num > a) {
+                        System.out.println("Please input an integer between " + b + " and " + a);
+                    } else {
+                        error = false;
+                    }
+                }
+            } catch (IOException e) {
+                System.out.println("Input error: " + e.getMessage());
+            } catch (NumberFormatException ex) {
+                System.out.println("Please, input an integer (example: 5)");
+            }
+        } while (error);
+        return num;
+    }
+
+    /**
+     * Asks the user for an arraySize number of ints between a and b, without minding the order
+     * @param msg = Message to print to the user
+     * @param a = Bound
+     * @param b = Bound
+     * @param arraySize = Size of the array
+     * @return = Plain array of ints between a and b input by the user
+     */
+    public static int[] askIntBetweenArray(String msg, int a, int b, int arraySize)
+    {
+        int[] intArray = new int[arraySize];
+        System.out.println(msg);
+        for(int i = 0; i < arraySize; i++) {
+            intArray[i] = askIntBetween((i+1) + ": ", a, b);
+        }
+        return intArray;
+    }
+
+    /**
+     * Asks the user for a listSize number of ints between a and b, without minding the order
+     * @param msg = Message to print to the user
+     * @param a = Bound
+     * @param b = Bound
+     * @param listSize = size of the ArrayList
+     * @return = ArrayList of Integers between a and b input by the user
+     */
+    public static ArrayList<Integer> askIntBetweenArrayList(String msg, int a, int b, int listSize)
+    {
+        ArrayList<Integer> integerList = new ArrayList<>();
+        System.out.println(msg);
+        for(int i = 0; i < listSize; i++) {
+            integerList.add(askIntBetween((i + 1) + ": ", a, b));
+        }
+        return integerList;
+    }
+
+    /**
      * Asks the user for an unsigned int, checking for exceptions
      * @param msg = Message to print to the user
      * @return = Unsigned int input by the user
@@ -179,6 +252,79 @@ public class InputAsker
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             doubleList.add(askDouble(i + ": "));
+        }
+        return doubleList;
+    }
+
+    /**
+     * Asks the user for a double between a and b, without minding the order
+     * @param msg = Message to print to the user
+     * @param a = Bound
+     * @param b = Bound
+     * @return = double input by the user
+     */
+    public static double askDoubleBetween(String msg, double a, double b)
+    {
+        double num = 0;
+        boolean error = true;
+        do {
+            System.out.print(msg);
+            try {
+                num = Double.parseDouble(br.readLine());
+                if (a <= b) {
+                    if (num < a || num > b) {
+                        System.out.println("Please input a double between " + a + " and " + b);
+                    } else {
+                        error = false;
+                    }
+                } else {
+                    if (num < b || num > a) {
+                        System.out.println("Please input a double between " + b + " and " + a);
+                    } else {
+                        error = false;
+                    }
+                }
+            } catch (IOException e) {
+                System.out.println("Input error: " + e.getMessage());
+            } catch (NumberFormatException ex) {
+                System.out.println("Please, input a double (example: 5.6)");
+            }
+        } while (error);
+        return num;
+    }
+
+    /**
+     * Asks the user for an arraySize of doubles between a and b, without minding the order
+     * @param msg = Message to print to the user
+     * @param a = Bound
+     * @param b = Bound
+     * @param arraySize = Size of the array
+     * @return = Plain array of doubles between a and b, input by the user
+     */
+    public static double[] askDoubleBetweenArray(String msg, double a, double b, int arraySize)
+    {
+        double[] doubleArray = new double[arraySize];
+        System.out.println(msg);
+        for(int i = 0; i < arraySize; i++) {
+            doubleArray[i] = askDoubleBetween((i+1) + ": ", a, b);
+        }
+        return doubleArray;
+    }
+
+    /**
+     * Asks the user for a listSize of doubles between a and b, without minding the order
+     * @param msg = Message to print to the user
+     * @param a = Bound
+     * @param b = Bound
+     * @param listSize = Size of the ArrayList
+     * @return = ArrayList of Doubles between a and b input by the user
+     */
+    public static ArrayList<Double> askDoubleBetweenArrayList(String msg, double a, double b, int listSize)
+    {
+        ArrayList<Double> doubleList = new ArrayList<>();
+        System.out.println(msg);
+        for(int i = 0; i < listSize; i++) {
+            doubleList.add(askDoubleBetween((i+1) + ": ", a, b));
         }
         return doubleList;
     }
