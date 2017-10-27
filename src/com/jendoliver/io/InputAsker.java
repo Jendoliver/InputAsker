@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class InputAsker
 {
@@ -57,11 +58,11 @@ public class InputAsker
      * Asks the user for a listSize number of ints, checking for exceptions
      * @param msg = Message to print to the user
      * @param listSize = size of the ArrayList
-     * @return = ArrayList of Integers input by the user
+     * @return = List of Integers input by the user
      */
-    public static ArrayList<Integer> askIntArrayList(String msg, int listSize)
+    public static List<Integer> askIntList(String msg, int listSize)
     {
-        ArrayList<Integer> integerList = new ArrayList<>();
+        List<Integer> integerList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             integerList.add(askInt((i + 1) + ": "));
@@ -130,11 +131,11 @@ public class InputAsker
      * @param a = Bound
      * @param b = Bound
      * @param listSize = size of the ArrayList
-     * @return = ArrayList of Integers between a and b input by the user
+     * @return = List of Integers between a and b input by the user
      */
-    public static ArrayList<Integer> askIntBetweenArrayList(String msg, int a, int b, int listSize)
+    public static List<Integer> askIntBetweenList(String msg, int a, int b, int listSize)
     {
-        ArrayList<Integer> integerList = new ArrayList<>();
+        List<Integer> integerList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             integerList.add(askIntBetween((i + 1) + ": ", a, b));
@@ -189,11 +190,11 @@ public class InputAsker
      * Asks the user a listSize number of ints, checking for exceptions
      * @param msg = Message to print to the user
      * @param listSize = Size of the ArrayList
-     * @return = ArrayList of unsigned Integers input by the user
+     * @return = List of unsigned Integers input by the user
      */
-    public static ArrayList<Integer> askUnsignedIntArrayList(String msg, int listSize)
+    public static List<Integer> askUnsignedIntList(String msg, int listSize)
     {
-        ArrayList<Integer> unsignedIntegerList = new ArrayList<>();
+        List<Integer> unsignedIntegerList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             unsignedIntegerList.add(askUnsignedInt((i + 1) + ": "));
@@ -244,11 +245,11 @@ public class InputAsker
      * Asks the user for a listSize of doubles, checking for exceptions
      * @param msg = Message to print to the user
      * @param listSize = Size of the ArrayList
-     * @return = ArrayList of Doubles input by the user
+     * @return = List of Doubles input by the user
      */
-    public static ArrayList<Double> askDoubleArrayList(String msg, int listSize)
+    public static List<Double> askDoubleList(String msg, int listSize)
     {
-        ArrayList<Double> doubleList = new ArrayList<>();
+        List<Double> doubleList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             doubleList.add(askDouble(i + ": "));
@@ -317,11 +318,11 @@ public class InputAsker
      * @param a = Bound
      * @param b = Bound
      * @param listSize = Size of the ArrayList
-     * @return = ArrayList of Doubles between a and b input by the user
+     * @return = List of Doubles between a and b input by the user
      */
-    public static ArrayList<Double> askDoubleBetweenArrayList(String msg, double a, double b, int listSize)
+    public static List<Double> askDoubleBetweenList(String msg, double a, double b, int listSize)
     {
-        ArrayList<Double> doubleList = new ArrayList<>();
+        List<Double> doubleList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             doubleList.add(askDoubleBetween((i+1) + ": ", a, b));
@@ -376,11 +377,11 @@ public class InputAsker
      * Asks the user for a listSize of doubles, checking for exceptions
      * @param msg = Message to print to the user
      * @param listSize = Size of the ArrayList
-     * @return = ArrayList of Doubles input by the user
+     * @return = List of Doubles input by the user
      */
-    public static ArrayList<Double> askUnsignedDoubleArrayList(String msg, int listSize)
+    public static List<Double> askUnsignedDoubleList(String msg, int listSize)
     {
-        ArrayList<Double> unsignedDoubleList = new ArrayList<>();
+        List<Double> unsignedDoubleList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             unsignedDoubleList.add(askUnsignedDouble(i + ": "));
@@ -413,11 +414,11 @@ public class InputAsker
      * Asks the user for listSize of Strings, checking for exceptions
      * @param msg = Message to print to the user
      * @param listSize = Size of the ArrayList
-     * @return = ArrayList of Strings input by the user
+     * @return = List of Strings input by the user
      */
-    public static ArrayList<String> askStringArrayList(String msg, int listSize)
+    public static List<String> askStringList(String msg, int listSize)
     {
-        ArrayList<String> stringList = new ArrayList<>();
+        List<String> stringList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             stringList.add(askString((i+1) + ": "));
@@ -454,11 +455,11 @@ public class InputAsker
      * Asks the user for a listSize strings which can't be empty, checking for exceptions
      * @param msg = Message to print to the user
      * @param listSize = Size of the ArrayList
-     * @return = ArrayList of no-empty Strings input by the user
+     * @return = List of no-empty Strings input by the user
      */
-    public static ArrayList<String> askNonEmptyStringArrayList(String msg, int listSize)
+    public static List<String> askNonEmptyStringList(String msg, int listSize)
     {
-        ArrayList<String> nonEmptyStringList = new ArrayList<>();
+        List<String> nonEmptyStringList = new ArrayList<>();
         System.out.println(msg);
         for(int i = 0; i < listSize; i++) {
             nonEmptyStringList.add(askNonEmptyString((i+1) + ": "));
